@@ -1,0 +1,632 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "t5DP3gVwIWPi"
+   },
+   "source": [
+    "# <center> Week-1 Assignment Solutions <center>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "yE7cWpPDhZXe"
+   },
+   "source": [
+    "#### Problem No: 1\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "id": "ahU4eHL7hU19"
+   },
+   "outputs": [],
+   "source": [
+    "def str2list(str1):\n",
+    "    # write code to add each character in the string into a list format\n",
+    "    # don't use any inbuilt methods\n",
+    "    # input:\n",
+    "        # str1 : input string\n",
+    "    # output:\n",
+    "        # return list (Replace None with output in return statement)\n",
+    "        \n",
+    "        \n",
+    "    ### Write your code\n",
+    "    list1=[]\n",
+    "    for i in range(0,len(str1)-1):\n",
+    "        list1.append(str1[i])\n",
+    "    print(list1)\n",
+    "    \n",
+    "    ### End of code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['r', 'e', 't', 'u', 'r', 'n', ' ', 'l', 'i', 's', 't']\n"
+     ]
+    }
+   ],
+   "source": [
+    "str1=\"return lists\"\n",
+    "str2list(str1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "b41Fw-aahtee"
+   },
+   "source": [
+    "#### Problem No: 2\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "id": "vp0YgjS1hukE"
+   },
+   "outputs": [],
+   "source": [
+    "def listcombine(list1, list2):\n",
+    "    # write code to combine two lists into one 2D list\n",
+    "    # don't use any inbuilt methods\n",
+    "    # input:\n",
+    "        # list1 : input list1\n",
+    "        # list2 : input list2\n",
+    "    # output:\n",
+    "        # return the combined list (Replace None with output in return statement)\n",
+    "    \n",
+    "    \n",
+    "    ### Write your code here\n",
+    "    list3=[]\n",
+    "    for i in range(len(list1)):\n",
+    "        li=[]\n",
+    "        li.append(list1[i])\n",
+    "        li.append(list2[i])\n",
+    "        list3.append(li)\n",
+    "    print(list3)\n",
+    "    \n",
+    "    \n",
+    "    ### End of code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[2, 0], [21, 9], [4, 7]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1=[2,21,4]\n",
+    "list2=[0,9,7]\n",
+    "listcombine(list1, list2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "tGPexTCviAoF"
+   },
+   "source": [
+    "#### Problem No: 3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "id": "v3UdFh-CiD4u"
+   },
+   "outputs": [],
+   "source": [
+    "def reverselist(list1):\n",
+    "    # write code to reverse the elements in a list\n",
+    "    # don't use any inbuilt methods\n",
+    "    # input:\n",
+    "        # list1 : input list1\n",
+    "    # output:\n",
+    "        # retun the reversed list (Replace None with output in return statement)\n",
+    "\n",
+    "\n",
+    "    ### Write your code here\n",
+    "    list2=[]\n",
+    "    for i in range(len(list1)-1,0,-1):\n",
+    "        list2.append(list1[i])\n",
+    "    print(list2)\n",
+    "    \n",
+    "    \n",
+    "    ### End of code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5, 8, 3, 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1=[1,9,3,8,5]\n",
+    "reverselist(list1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "_8B-ZTGkiIz_"
+   },
+   "source": [
+    "#### Problem No: 4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "id": "iNMij6djiMUt"
+   },
+   "outputs": [],
+   "source": [
+    "def createdict(keys, values):\n",
+    "    # write code to create a dictionary with keys & values lists\n",
+    "    # input:\n",
+    "        # keys : input list of keys\n",
+    "        # values : input list of values\n",
+    "    # output:\n",
+    "        # return the dictionary (Replace None with output in return statement)\n",
+    "\n",
+    "\n",
+    "    ### Write your code here\n",
+    "    dict={}\n",
+    "    for key,value in zip(keys,values):\n",
+    "        dict[key]=value\n",
+    "    return dict\n",
+    "    \n",
+    "    \n",
+    "    ### End of code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1: 8, 2: 9, 3: 0, 4: 5}\n"
+     ]
+    }
+   ],
+   "source": [
+    "keys=[1,2,3,4]\n",
+    "values=[8,9,0,5]\n",
+    "dict1=createdict(keys, values)\n",
+    "print(dict1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "TYt62cDOiYle"
+   },
+   "source": [
+    "#### Problem No: 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {
+    "id": "YfiJSAz8iZMt"
+   },
+   "outputs": [],
+   "source": [
+    "def string_occurence(str1, sub_str):\n",
+    "    # Check if a string contains a specific substring given as input.\n",
+    "    # If the string search is successful then return the number of occurrences otherwise 0.\n",
+    "    # input:\n",
+    "        # str1: input string\n",
+    "        # stb_str: input substring\n",
+    "    # output: \n",
+    "        # number of occurences of substring in string (Replace None with output in return statement)\n",
+    "    \n",
+    "    ### Write your code here\n",
+    "    count=0\n",
+    "    s=str1.split()\n",
+    "    for i in s:\n",
+    "        if i==sub_str:\n",
+    "            count=count+1\n",
+    "    print(count)\n",
+    "    \n",
+    "    \n",
+    "    \n",
+    "    ### End of code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "str1=\"hello how are are my dearest friend hello\"\n",
+    "sub_str=\"hello\"\n",
+    "string_occurence(str1, sub_str)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "bz-ZMJCGifjg"
+   },
+   "source": [
+    "#### Problem No: 6"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {
+    "id": "h4ru_eWAigLI"
+   },
+   "outputs": [],
+   "source": [
+    "def perfectnumbercheck(num):\n",
+    "    # write code to check given number is perfect or not\n",
+    "    # Hint: return True or False\n",
+    "    # input:\n",
+    "        # num : input number\n",
+    "    # output:\n",
+    "        # return boolean value (Replace None with output in return statement)\n",
+    "\n",
+    "\n",
+    "    ### Write your code here\n",
+    "    list1=[]\n",
+    "    sum=0\n",
+    "    for i in range(1,num):\n",
+    "        if num%i==0:\n",
+    "            list1.append(i)\n",
+    "    for i in list1:\n",
+    "        sum=sum+i\n",
+    "    if num==sum:\n",
+    "        print(True)\n",
+    "    else:\n",
+    "        print(False)\n",
+    "    \n",
+    "    \n",
+    "    ### End of code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "9\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "num=int(input())\n",
+    "perfectnumbercheck(num)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "DceitnVmikCm"
+   },
+   "source": [
+    "#### Problem No: 7"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {
+    "id": "R8ZGyY8LioOE"
+   },
+   "outputs": [],
+   "source": [
+    "import re\n",
+    "def passwordstrengthcheck(password):\n",
+    "    # check below conditions for the given password & return True if it pass otherwise False.\n",
+    "    # At least 1 small letter [a-z] and 1 capital letter [A-Z].\n",
+    "    # At least 1 digit [0-9].\n",
+    "    # At least 1 special character from [$#@].\n",
+    "    # Minimum length 6 characters.\n",
+    "    # Maximum length 16 characters.\n",
+    "    # input:\n",
+    "        # password: input string\n",
+    "    # output:\n",
+    "        # return boolean value (Replace None with output in return statement)\n",
+    "\n",
+    "\n",
+    "    ### Write your code here\n",
+    "    pattern=\"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$#@])[A-Za-z\\d@$!%*?&]{6,16}$\"\n",
+    "    if re.match(pattern,password):\n",
+    "        print(True)\n",
+    "    else:\n",
+    "        print(False)\n",
+    "\n",
+    "\n",
+    "    ### End of code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "password=\"fghliKhilADBD@8\"\n",
+    "passwordstrengthcheck(password)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "3gbKdkHAi0SC"
+   },
+   "source": [
+    "#### Problem No: 8"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {
+    "id": "xgicShJKi0zA"
+   },
+   "outputs": [],
+   "source": [
+    "def wordfrequency(str1):\n",
+    "    # Find out the frequency of words in a given string (prompted by the user) using dictionaries \n",
+    "    # words frequency must be case-insensitive\n",
+    "    # Hint: return a dictionary with unique words in the string as keys and theier frequency as the values\n",
+    "    # input:\n",
+    "        # str1 : input str1\n",
+    "    # output:\n",
+    "        # retrun the dictionary (Replace None with output in return statement)\n",
+    "         \n",
+    "    ### Write your code here\n",
+    "    dict1=dict()\n",
+    "    s=str1.split()\n",
+    "    for i in s:\n",
+    "        if i in dict1:\n",
+    "            dict1[i]=dict1[i]+1\n",
+    "        else:\n",
+    "            dict1[i]=1\n",
+    "    return dict1\n",
+    "    \n",
+    "\n",
+    "    ### End of code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'hello': 2, 'how': 1, 'are': 1, 'you': 1, 'today': 1}"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "str1=\"hello how are you today hello\"\n",
+    "wordfrequency(str1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "4VzKnYm9i8uG"
+   },
+   "source": [
+    "#### Problem No: 9"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {
+    "id": "YOh2XFuqi9SJ"
+   },
+   "outputs": [],
+   "source": [
+    "from sympy import *\n",
+    "def primenumcount(list1):\n",
+    "    # Write a function that can take a list of integers as function arguments and count the number of prime numbers in it (You can use inbuilt methods).\n",
+    "    # If the prime number count below the len(list)/4 then return \"1\"\n",
+    "    # If the prime number count between len(list)/4 and len(list)/2 then return \"2\" (boundary points included).\n",
+    "    # If the prime number count above the len(list)/2 then return “3”.\n",
+    "    # input:\n",
+    "        # list1: input list of integers\n",
+    "    # output:\n",
+    "        # return count of prime (Replace None with output in return statement)\n",
+    "         \n",
+    "    ### Write your code here\n",
+    "    primecount=0\n",
+    "    length1=len(list1)/4\n",
+    "    length2=len(list1)/2\n",
+    "    for i in list1:\n",
+    "        if(isprime(i)):\n",
+    "            primecount=primecount+1\n",
+    "    print(\"prime count is\",primecount)\n",
+    "    if (primecount<(length1)):\n",
+    "        print(\"1\")\n",
+    "    elif length1 <= primecount <=length2:\n",
+    "        print(\"2\")\n",
+    "    elif primecount >length2:\n",
+    "        print(\"3\")\n",
+    "    \n",
+    "\n",
+    "    ### End of code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "prime count is 3\n",
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1=[1,2,4,5,6,7,8,9,10]\n",
+    "primenumcount(list1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "2BsFdnKyjDGT"
+   },
+   "source": [
+    "#### Problem No: 10"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {
+    "id": "IyrHjMqFjDmQ"
+   },
+   "outputs": [],
+   "source": [
+    "def unique_words(str1, length):\n",
+    "    # Write a function that can take a string and an integer as function arguments and display \n",
+    "    # the unique words (words are case-insensitive) that can meet the condition i.e. word length >= given integer \n",
+    "    # (Don’t use any inbuilt method for removing duplicate words).\n",
+    "    \n",
+    "    # input:\n",
+    "        # str1 : input string\n",
+    "        # length : string length\n",
+    "    # output:\n",
+    "        # list of unique words those meets the above condition (Replace None with output in return statement)\n",
+    "         \n",
+    "    ### Write your code here\n",
+    "    s=str1.split()\n",
+    "    set1=set()\n",
+    "    for i in s:\n",
+    "        if len(i)>=length:\n",
+    "            set1.add(i)\n",
+    "    print(set1)\n",
+    "    \n",
+    "    \n",
+    "    ### End of code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'hello', 'guys'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "str1=\"hello how are you guys hello\"\n",
+    "length=4\n",
+    "unique_words(str1, length)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "colab": {
+   "provenance": []
+  },
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}
